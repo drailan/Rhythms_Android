@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'Rhytms'
+            keyPassword 'iddqdidkfa'
+            storeFile file('C:/Users/Huruk/myKeyPath.jks')
+            storePassword 'iddqdidkfa'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.rr.rhythms"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0.6"
+        manifestPlaceholders = [HOCKEYAPP_APP_ID: "f0ac85a0757e4e57874a8a64ff0e81dc"]
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFile 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        incremental true
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'net.hockeyapp.android:HockeySDK:4.0.1'
+    compile 'joda-time:joda-time:2.9.4'
+    compile 'com.google.code.gson:gson:2.7'
+}
