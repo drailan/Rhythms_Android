@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Rhythms</string>
+    <string name="scale90">90</string>
+    <string name="scale60">60</string>
+    <string name="scale30">30</string>
+    <string name="pickMainDate">First date</string>
+    <string name="pickDate">Pick date</string>
+    <string name="pickAuxDate">Second date</string>
+    <string name="graphsMain">Main</string>
+    <string name="graphsAux">Aux</string>
+
+    <string name="label_graphs">Graphs</string>
+    <string name="label_scale">Scale</string>
+    <string name="action_favorite">Add to favorites</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="selectPerson">Select</string>
+    <string name="person">Person</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="view">View</string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="physical">Physical</string>
+    <string name="emotional">Emotional</string>
+    <string name="intellect">Intellect</string>
+    <string name="intuition">Intuition</string>
+    <string name="prev_day">D-1</string>
+    <string name="today">Today</string>
+    <string name="next_day">D+1</string>
+
+    <string name="percentage">%1$.0f%%"</string>
+    <string name="add_person">Add person</string>
+    <string name="pick_date">Pick date</string>
+    <string name="manage_people">Manage people</string>
+</resources>

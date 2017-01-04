@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_today"
+        android:icon="@drawable/ic_sync_black_24dp"
+        android:title="@string/today"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/pick_date"
+        android:title="@string/pick_date"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/group_black"
+        android:title="@string/manage_people"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColor">#FF4081</color>
+
+    <color name="graph24">#FF0000</color>
+    <color name="graph28">#0000FF</color>
+    <color name="graph33">#008000</color>
+    <color name="graph40">#000000</color>
+    <color name="graph56">#FFFF00</color>
+    <color name="graph92">#ffa500</color>
+    <color name="graph276">#800080</color>
+</resources>
