@@ -9,15 +9,12 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridView
-import android.widget.ListAdapter
 import android.widget.RadioGroup
 
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -39,7 +36,6 @@ import com.rr.rhythms.Entities.GraphInnerState
 import com.rr.rhythms.Entities.GraphState
 import com.rr.rhythms.Entities.People
 import com.rr.rhythms.Entities.Person
-import com.rr.rhythms.Entities.Point
 import com.rr.rhythms.Fragments.DatePickerFragment
 import com.rr.rhythms.Helpers.CustomXAxisValueFormatter
 import com.rr.rhythms.Helpers.GraphPopupView
@@ -48,6 +44,7 @@ import com.rr.rhythms.Interfaces.IDateSettable
 import com.rr.rhythms.Interfaces.IGraph
 import com.rr.rhythms.Interfaces.IPerson
 import com.rr.rhythms.R
+import kotlinx.android.synthetic.main.graph_state_cell.*
 
 import net.hockeyapp.android.CrashManager
 import net.hockeyapp.android.UpdateManager
@@ -55,7 +52,6 @@ import net.hockeyapp.android.UpdateManager
 import org.joda.time.DateTime
 import org.joda.time.Days
 
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.ArrayList
 import java.util.Calendar
@@ -73,12 +69,12 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener, OnChartG
     private var _graphs: ArrayList<IGraph>? = null
     private var _menu: Menu? = null
 
-    fun getFirstBirthDate(): Calendar {
-        return _firstBirthDate!!
+    fun getFirstBirthDate(): Calendar? {
+        return _firstBirthDate
     }
 
-    fun getSecondBirthDate(): Calendar {
-        return _secondBirthDate!!
+    fun getSecondBirthDate(): Calendar? {
+        return _secondBirthDate
     }
 
     override fun setFirstBirthDate(cal: Calendar) {
@@ -182,29 +178,30 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener, OnChartG
             }
 
             DrawChart()
-            //            BuildGraphState();
+            //BuildGraphState()
         }
     }
 
     private fun BuildGraphState() {
-        //        GridView grid = (GridView) findViewById(R.id.graph_state_grid);
-        //
-        //        if (grid != null) {
-        //
-        //            ArrayList<GraphState> graphStates = new ArrayList<>();
-        //
-        //            for (IGraph graph : _graphs.subList(0, _graphs.size() - 3)) {
-        //                GraphInnerState[] currentStates = graph.getCurrentStates(getTotalDays(_firstBirthDate));
-        //                graphStates.add(new GraphState(graph, currentStates));
-        //            }
-        //
-        //            GraphStateAdapter _adapter = new GraphStateAdapter(this, graphStates);
-        //
-        //            grid.setNumColumns(graphStates.get(0).states.length);
-        //            grid.setAdapter(_adapter);
-        //
-        //            setDynamicWidth(grid);
-        //        }
+//        var grid = (GridView) findViewById(R.id.graph_state_grid);
+//        val test = graph_state_grid;
+//
+//        if (grid != null) {
+//
+//            val graphStates = ArrayList<GraphState>()
+//
+//            for (graph in _graphs!!.subList(0, _graphs!!.size - 3)) {
+//                val currentStates = graph.getCurrentStates(getTotalDays(_firstBirthDate!!))
+//                graphStates.add(GraphState(graph, currentStates))
+//            }
+//
+//            val _adapter = GraphStateAdapter(this, graphStates)
+//
+//            grid.setNumColumns(graphStates[0].states.size)
+//            grid.setAdapter(_adapter);
+//
+//            setDynamicWidth(grid);
+//        }
     }
 
     private fun setDynamicWidth(gridView: GridView) {
